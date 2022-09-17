@@ -1,0 +1,13 @@
+ext {
+    deps = [
+            springBoot: [
+                    "org.springframework.boot:spring-boot-starter-data-jpa",
+            ],
+            hsqldb: [
+                    "org.hsqldb:hsqldb",
+            ],
+            lombok       : [
+                    "org.projectlombok:lombok"
+            ]
+    ]
+}

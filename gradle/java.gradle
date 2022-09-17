@@ -1,0 +1,23 @@
+apply from: "${rootDir}/gradle/dependencies.gradle"
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+}
+
+dependencies {
+    implementation deps.springBoot
+    implementation deps.hsqldb
+
+    compileOnly deps.lombok
+    annotationProcessor deps.lombok
+}
+
+group = 'complex.query.simple.result'
+version = '1.0.0-SNAPSHOT'
+description = 'Complex query simple result'
+java.sourceCompatibility = JavaVersion.VERSION_11
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
